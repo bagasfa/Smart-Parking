@@ -6,7 +6,7 @@
   document.getElementById('mahasiswa').classList.add('active');
 </script>
 <section class="section">
-  
+
   <div class="section-header">
     <h1>Mahasiswa</h1>
   </div>
@@ -17,12 +17,15 @@
           <div class="card-header">
             <form method="GET" class="form-inline">
               <div class="form-group">
-                <input type="text" name="search" class="form-control" placeholder="Cari Mahasiswa" value="{{ request()->get('search') }}">
+                <input type="text" name="search" class="form-control" placeholder="Cari NIM / Nama" value="{{ request()->get('search') }}">
               </div>
               <div class="form-group">
                 <button type="submit" class="btn btn-primary">Cari</button>
               </div>
             </form>
+            <a href="{{ url('/mahasiswa') }}">
+                <button class="btn btn-success">Show All</button>
+            </a>
           </div>
           <div class="card-header">
             <button type="button" data-toggle="modal" data-target="#addData" class="btn btn-primary"><i class="fa fa-plus"></i> Tambah Mahasiswa</button>
@@ -81,7 +84,7 @@
           </div>
           <div class="card-footer text-right">
             <nav class="d-inline-block">
-              
+
             </nav>
           </div>
         </div>
@@ -90,7 +93,7 @@
     <!-- Modal -->
     <div class="modal fade" id="addData" tabindex="-1" role="dialog" aria-labelledby="addData" aria-hidden="true">
       <div class="modal-dialog" role="document">
-        <div class="modal-content"> 
+        <div class="modal-content">
           <div class="modal-header">
             <h5 class="modal-title" id="DataLabel">Tambah Mahasiswa</h5>
           </div>
@@ -153,7 +156,7 @@
         </div>
       </div>
     </div>
-    <!-- Modal -->  
+    <!-- Modal -->
   </div>
 </section>
 @endsection

@@ -9,12 +9,12 @@
 | routes are loaded by the RouteServiceProvider within a group which
 | contains the "web" middleware group. Now create something great!
 |
-*/	
+*/
 // Authenticate
 Route::get('/', 'AuthController@index')->name('login');
 Route::post('/postLogin','AuthController@postLogin');
 Route::get('/logout','AuthController@logout');
-	
+
 // Admin Panel
 Route::group(['middleware' => ['auth','checkRole:admin']], function(){
 	// Dashboard
@@ -35,8 +35,8 @@ Route::group(['middleware' => ['auth','checkRole:admin']], function(){
 	Route::get('/petugas/{id}/delete','PetugasController@delete');
 	Route::get('/petugas/{id}/editProfile', 'PetugasController@editProfile');
 	Route::post('/petugas/{id}/updateProfile', 'PetugasController@updateProfile');
-	Route::get('/admin/{id}/editPass', 'AdminController@editPass');
-	Route::post('/admin/{id}/updatePass', 'AdminController@updatePass');
+	Route::get('/petugas/{id}/editPass', 'PetugasController@editPass');
+	Route::post('/petugas/{id}/updatePass', 'PetugasController@updatePass');
 
 	// Mahasiswa
 	Route::get('/mahasiswa', 'MahasiswaController@index');
@@ -45,9 +45,16 @@ Route::group(['middleware' => ['auth','checkRole:admin']], function(){
 	Route::get('/mahasiswa/{id}/editProfile', 'MahasiswaController@editProfile');
 	Route::post('/mahasiswa/{id}/updateProfile', 'MahasiswaController@updateProfile');
 	Route::get('/mahasiswa/{id}/editPass', 'MahasiswaController@editPass');
-	Route::post('/mahasiswa/{id}/updatePass', 'MahasiswaController@updatePass');
+    Route::post('/mahasiswa/{id}/updatePass', 'MahasiswaController@updatePass');
+
+    // Laporan
+    Route::get('/laporan', 'LaporanController@index');
+    Route::post('/laporan/create', 'LaporanController@create');
+	Route::get('/laporan/{id_laporan}/delete','LaporanController@delete');
+    Route::get('/laporan/{id_laporan}/keluar', 'LaporanController@updateKeluar');
+    Route::get('/laporan/export', 'LaporanController@export');
 });
-	
+
 // Api
 Route::get('/admin/api', 'AdminController@api');
 Route::get('/petugas/api', 'PetugasController@api');

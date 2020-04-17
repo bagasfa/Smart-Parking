@@ -47,7 +47,7 @@
           </li>
         </ul>
       </nav>
-      
+
       <!-- Side Bar -->
       <div class="main-sidebar">
         <aside id="sidebar-wrapper">
@@ -60,10 +60,11 @@
           <ul class="sidebar-menu">
 
             <!-- List Menu Sebagai Admin -->
-            
+
               <li id="dashboard" class="">
                 <a class="nav-link" href="{{url('/dashboard')}}"><i class="far fa-circle"></i> <span>Dashboard</span></a>
               </li>
+              <hr class="sidebar-divider my-0">
               <li id="admin" class="">
                 <a class="nav-link" href="{{url('/admin')}}"><i class="far fa-circle"></i> <span>Admin</span></a>
               </li>
@@ -72,7 +73,11 @@
               </li>
               <li id="mahasiswa" class="">
                 <a class="nav-link" href="{{url('/mahasiswa')}}"><i class="far fa-circle"></i> <span>Mahasiswa</span></a>
-              </li> 
+              </li>
+              <hr class="sidebar-divider my-0">
+              <li id="laporan" class="">
+                <a class="nav-link" href="{{url('/laporan')}}"><i class="far fa-circle"></i> <span>Laporan</span></a>
+              </li>
 
           </ul>
         </aside>
@@ -86,7 +91,7 @@
       <!-- Footer -->
       <footer class="main-footer">
         <div class="footer-left">
-          Copyright &copy; <script>document.write(new Date().getFullYear());</script> <div class="bullet"></div> Developed by <a href="https://www.instagram.com/_nfakhrian/" target="blank">N</a><a href="https://www.instagram.com/bagasfaf/" target="blank">B</a><a href="https://www.instagram.com/msvbill/" target="blank">-</a><a href="https://www.instagram.com/_kazekuri/" target="blank">3</a> <a href="ub.ac.id" target="blank">UB</a>
+          Copyright &copy; <script>document.write(new Date().getFullYear());</script> <div class="bullet"></div> Developed by <a href="https://www.instagram.com/_nfakhrian/" target="blank">N</a><a href="https://www.instagram.com/bagasfaf/" target="blank">B</a><a href="https://www.instagram.com/msvbill/" target="blank">-</a><a href="https://www.instagram.com/_kazekuri/" target="blank">3</a> <a href="https://ub.ac.id/" target="blank">UB</a>
         </div>
       </footer>
     </div>
@@ -131,7 +136,7 @@
         curr_second = checkTime(curr_second);
       document.getElementById('clock').innerHTML=curr_hour + ":" + curr_minute + ":" + curr_second + " " + a_p;
         }
- 
+
     function checkTime(i) {
         if (i < 10) {
             i = "0" + i;

@@ -7,13 +7,16 @@ use App\User;
 
 class MahasiswaController extends Controller
 {
-    public function index(){
-    	$user = User::where('role','mahasiswa')->paginate(100);
+    public function index(Request $request){
+    	$user = user::when($request->search, function($query) use($request){
+            $query->where('nama_user', 'LIKE', '%'.$request->search.'%')
+                ->orWhere('nik', 'LIKE', '%'.$request->search.'%');
+        })->where('role', '=', 'mahasiswa')->paginate(100);
     	return view('Mahasiswa.index', compact('user'));
     }
 
     public function api(){
-       $user = User::select('id', 'nama_user', 'email', 'role', 'nim', 'angkatan', 'fakultas')->where('role','mahasiswa')->get();
+        $user = User::select('id', 'nama_user', 'email', 'role', 'nim', 'angkatan', 'fakultas')->where('role','mahasiswa')->get();
         $json = response()->json(array('result' => $user));
         return $json;
     }
@@ -47,7 +50,6 @@ class MahasiswaController extends Controller
     	$user->nama_user = $request->nama_user;
     	$user->email = $request->email;
     	$user->password = $request->password;
-    	$user->role = 'mahasiswa';
     	$user->nim = $request->nim;
     	$user->angkatan = $request->angkatan;
     	$user->fakultas = $request->fakultas;
@@ -62,15 +64,7 @@ class MahasiswaController extends Controller
 
     public function updatePass($id, Request $request){
     	$user = User::find($id);
-    	$user->nama_user = $request->nama_user;
-    	$user->email = $request->email;
-    	$user->role = 'mahasiswa';
-    	$user->nim = $request->nim;
-    	$user->angkatan = $request->angkatan;
-    	$user->fakultas = $request->fakultas;
     	if($request->password == $user->password){
-            $user->password = $request->password;
-            $user->save();
             return redirect('/mahasiswa')->with('error', 'Tidak ada perubahan pada Password!');
         }else{
             $user->password = bcrypt($request->password);
