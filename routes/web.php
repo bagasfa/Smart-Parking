@@ -22,7 +22,6 @@ Route::group(['middleware' => ['auth','checkRole:admin']], function(){
 
 	// Admin
 	Route::get('/admin', 'AdminController@index');
-	Route::get('/admin/api', 'AdminController@api');
 	Route::post('/admin/create', 'AdminController@create');
 	Route::get('/admin/{id}/delete','AdminController@delete');
 	Route::get('/admin/{id}/editProfile', 'AdminController@editProfile');
@@ -48,16 +47,10 @@ Route::group(['middleware' => ['auth','checkRole:admin']], function(){
 	Route::get('/mahasiswa/{id}/editPass', 'MahasiswaController@editPass');
 	Route::post('/mahasiswa/{id}/updatePass', 'MahasiswaController@updatePass');
 });
+	
+// Api
+Route::get('/admin/api', 'AdminController@api');
+Route::get('/petugas/api', 'PetugasController@api');
+Route::get('/mahasiswa/api', 'MahasiswaController@api');
 
-// Login Petugas Android
-Route::group(['middleware' => ['auth','checkRole:admin,petugas']], function(){
-	// Api Petugas
-	Route::get('/petugas/api', 'PetugasController@api');
-});
-
-// Login Mahasiswa Android
-Route::group(['middleware' => ['auth','checkRole:admin,mahasiswa']], function(){
-	// Api Mahasiswa
-	Route::get('/mahasiswa/api', 'MahasiswaController@api');
-});
 ?>
