@@ -35,8 +35,8 @@ Route::group(['middleware' => ['auth','checkRole:admin']], function(){
 	Route::get('/petugas/{id}/delete','PetugasController@delete');
 	Route::get('/petugas/{id}/editProfile', 'PetugasController@editProfile');
 	Route::post('/petugas/{id}/updateProfile', 'PetugasController@updateProfile');
-	Route::get('/admin/{id}/editPass', 'AdminController@editPass');
-	Route::post('/admin/{id}/updatePass', 'AdminController@updatePass');
+	Route::get('/petugas/{id}/editPass', 'PetugasController@editPass');
+	Route::post('/petugas/{id}/updatePass', 'PetugasController@updatePass');
 
 	// Mahasiswa
 	Route::get('/mahasiswa', 'MahasiswaController@index');
