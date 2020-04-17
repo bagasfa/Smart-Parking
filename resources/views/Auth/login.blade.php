@@ -6,7 +6,7 @@
   <title>Login Page</title>
 
   <!-- Logo title -->
-  <link rel="shortcut icon" type="image/x-icon" href="{{asset('assets/img/ub.png')}}">
+  <link rel="shortcut icon" type="image/x-icon" href="{{asset('assets/img/logo.png')}}">
 
   <!-- General CSS Files -->
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">

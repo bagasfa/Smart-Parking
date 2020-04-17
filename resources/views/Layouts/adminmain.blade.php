@@ -7,7 +7,7 @@
   <title></title>
 
   <!-- Logo title -->
-  <link rel="shortcut icon" type="image/x-icon" href="{{asset('assets/img/ub.png')}}">
+  <link rel="shortcut icon" type="image/x-icon" href="{{asset('assets/img/logo.png')}}">
 
   <!-- Online CSS Files -->
   <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
@@ -34,7 +34,7 @@
         <ul class="navbar-nav navbar-right">
           <li class="dropdown"><a href="#" data-toggle="dropdown" class="nav-link dropdown-toggle nav-link-lg nav-link-user">
             <img alt="image" src="{{ asset('assets/img/avatar/avatar-1.png') }}" class="rounded-circle mr-1">
-            <div class="d-sm-none d-lg-inline-block">Hai, Boi Sandi</div></a>
+            <div class="d-sm-none d-lg-inline-block">Hai, {{auth()->user()->nama_user}}</div></a>
             <div class="dropdown-menu dropdown-menu-right">
               <a href="{{url('/profile')}}" class="dropdown-item has-icon">
                 <i class="far fa-user"></i> Profile
@@ -52,10 +52,10 @@
       <div class="main-sidebar">
         <aside id="sidebar-wrapper">
           <div class="sidebar-brand">
-            <a href="/dashboard">Inventori UB</a>
+            <a href="/dashboard"><img src="{{asset('assets/img/logo.png')}}" width="25px"> Smart Parking</a>
           </div>
           <div class="sidebar-brand sidebar-brand-sm">
-            <a href="/dashboard">UB</a>
+            <a href="/dashboard"><img src="{{asset('assets/img/logo.png')}}" width="25px"></a>
           </div>
           <ul class="sidebar-menu">
 
