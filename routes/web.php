@@ -18,7 +18,7 @@ Route::get('/logout','AuthController@logout');
 // Admin Panel
 Route::group(['middleware' => ['auth','checkRole:admin']], function(){
 	// Dashboard
-	Route::get('/dashboard','UserController@dashboard');
+	Route::get('/dashboard','Controller@dashboard');
 
 	// Admin
 	Route::get('/admin', 'AdminController@index');
