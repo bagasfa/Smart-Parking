@@ -7,15 +7,18 @@ use App\User;
 
 class AdminController extends Controller
 {
-    public function index(){
-    	$user = User::where('role','admin')->paginate(100);
+    public function index(Request $request){
+        $user = user::when($request->search, function($query) use($request){
+            $query->where('nama_user', 'LIKE', '%'.$request->search.'%')
+                ->orWhere('nik', 'LIKE', '%'.$request->search.'%');
+        })->where('role', '=', 'admin')->paginate(100);
     	return view('Admin.index', compact('user'));
     }
 
     public function api(){
        $user = User::select('id', 'nama_user', 'email', 'role', 'nik', 'telfon', 'alamat')->where('role','admin')->get();
         $json = response()->json(array("result" => $user));
-        return $json; 
+        return $json;
     }
 
     public function create(Request $request){
@@ -47,7 +50,6 @@ class AdminController extends Controller
     	$user->nama_user = $request->nama_user;
     	$user->email = $request->email;
     	$user->password = $request->password;
-    	$user->role = 'admin';
     	$user->nik = $request->nik;
     	$user->telfon = $request->telfon;
     	$user->alamat = $request->alamat;
@@ -62,15 +64,7 @@ class AdminController extends Controller
 
     public function updatePass($id, Request $request){
     	$user = User::find($id);
-        $user->nama_user = $request->nama_user;
-        $user->email = $request->email;
-        $user->role = 'admin';
-        $user->nik = $request->nik;
-        $user->telfon = $request->telfon;
-        $user->alamat = $request->alamat;
         if($request->password == $user->password){
-            $user->password = $request->password;
-            $user->save();
             return redirect('/admin')->with('error', 'Tidak ada perubahan pada Password!');
         }else{
             $user->password = bcrypt($request->password);

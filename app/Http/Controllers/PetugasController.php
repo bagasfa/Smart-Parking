@@ -7,8 +7,11 @@ use App\User;
 
 class PetugasController extends Controller
 {
-    public function index(){
-    	$user = User::where('role','petugas')->paginate(100);
+    public function index(Request $request){
+    	$user = user::when($request->search, function($query) use($request){
+            $query->where('nama_user', 'LIKE', '%'.$request->search.'%')
+                ->orWhere('nik', 'LIKE', '%'.$request->search.'%');
+        })->where('role', '=', 'petugas')->paginate(100);
     	return view('Petugas.index', compact('user'));
     }
 
@@ -47,7 +50,6 @@ class PetugasController extends Controller
     	$user->nama_user = $request->nama_user;
     	$user->email = $request->email;
     	$user->password = $request->password;
-    	$user->role = 'petugas';
     	$user->nik = $request->nik;
     	$user->telfon = $request->telfon;
     	$user->alamat = $request->alamat;
@@ -62,15 +64,7 @@ class PetugasController extends Controller
 
     public function updatePass($id, Request $request){
     	$user = User::find($id);
-    	$user->nama_user = $request->nama_user;
-    	$user->email = $request->email;
-    	$user->role = 'petugas';
-    	$user->nik = $request->nik;
-    	$user->telfon = $request->telfon;
-    	$user->alamat = $request->alamat;
     	if($request->password == $user->password){
-            $user->password = $request->password;
-            $user->save();
             return redirect('/petugas')->with('error', 'Tidak ada perubahan pada Password!');
         }else{
             $user->password = bcrypt($request->password);
