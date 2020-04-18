@@ -37,4 +37,24 @@ class AuthController extends Controller
     	Auth::logout();
     	return redirect('/')->with('error', 'Goodbye :(');
     }
+
+
+    // API Mobile Login
+    public function loginAPI(Request $request){
+        if(Auth::attempt($request->only('email','password'))){
+
+            if(auth()->user()->role == 'petugas'){
+                $user = User::select('id')->first();
+                return response()->json(array('result' => $status));
+            }else if(auth()->user()->role == 'mahasiswa'){
+                return redirect('/')->with('error', 'Silahkan Login sebagai Mahasiswa di Aplikasi Mobile !');
+            }else{
+
+            // Jika Berhasil Login
+            return redirect('/dashboard')->with('message', 'Welcome :)');
+            }
+        }
+        // Email atau Password salah
+        return redirect('/')->with('errors', 'Email atau Password anda Salah!');
+    }
 }
