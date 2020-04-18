@@ -22,15 +22,15 @@
               <div class="form-group">
                 &nbsp;<button type="submit" class="btn btn-primary">Cari</button>
               </div>
-            </form>
+            </form>&nbsp;
             <a href="{{ url('/laporan') }}">
-                &nbsp;<button class="btn btn-success">Show All</button>
+                <button class="btn btn-success">Show All</button>
             </a>
           </div>
           <div class="card-header">
-            <button type="button" data-toggle="modal" data-target="#addData" class="btn btn-primary"><i class="fa fa-plus"></i> Tambah Laporan</button>
+            <button type="button" data-toggle="modal" data-target="#addData" class="btn btn-primary"><i class="fa fa-plus"></i> Tambah Laporan</button>&nbsp;
             <a href="{{ url('/laporan/export') }}">
-                &nbsp;<button class="btn btn-success">Export Excel</button>
+                <button class="btn btn-success">Export Excel</button>
             </a>
           </div>
 
