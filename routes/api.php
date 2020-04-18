@@ -24,6 +24,11 @@ use Illuminate\Http\Request;
 	Route::get('/mahasiswa', 'MahasiswaController@indexAPI');
 	Route::post('/mahasiswa/create', 'MahasiswaController@createAPI');
 
-	// API Mobile Laporan / Petugas
+    // API Mobile Laporan / Petugas
+    Route::get('/laporan', 'LaporanController@indexAPI');
 	Route::post('/laporan/create', 'LaporanController@createAPI');
-	Route::post('/laporan/{id_laporan}/keluar', 'LaporanController@updateAPI');
+	Route::post('/laporan/keluar', 'LaporanController@updateAPI');
+
+    // API Login
+    Route::post('/login', 'AuthController@loginAPI');
+    Route::get('/logout', 'AuthController@logoutAPI');

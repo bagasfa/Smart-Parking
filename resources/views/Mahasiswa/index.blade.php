@@ -59,13 +59,11 @@
                         <i class="fas fa-edit"></i> Profile
                       </button>
                     </a>
-                    &nbsp;
                     <a href="{{url('mahasiswa/'.$mahasiswa->id. '/editPass')}}">
                       <button type="button" class="btn btn-outline-warning" data-toggle="tooltip" data-placement="top" title="Edit Password">
                         <i class="fas fa-edit"></i> Password
                       </button>
                     </a>
-                    &nbsp;
                     <a href="{{url('mahasiswa/'.$mahasiswa->id. '/delete')}}">
                       <button type="button" class="btn btn-outline-danger" data-toggle="tooltip" data-placement="top" title="Hapus">
                         <i class="fas fa-trash"></i>

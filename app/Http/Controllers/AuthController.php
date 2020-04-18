@@ -41,20 +41,31 @@ class AuthController extends Controller
 
     // API Mobile Login
     public function loginAPI(Request $request){
-        if(Auth::attempt($request->only('email','password'))){
 
-            if(auth()->user()->role == 'petugas'){
-                $user = User::select('id')->first();
-                return response()->json(array('result' => $status));
-            }else if(auth()->user()->role == 'mahasiswa'){
-                return redirect('/')->with('error', 'Silahkan Login sebagai Mahasiswa di Aplikasi Mobile !');
-            }else{
+        $server = "localhost";
+        $user = "root";
+        $password = "";
+        $nama_database = "smart_parking";
+        $db = mysqli_connect($server, $user, $password, $nama_database);
 
-            // Jika Berhasil Login
-            return redirect('/dashboard')->with('message', 'Welcome :)');
-            }
+        $sql = Auth::attempt($request->only('email','password'));
+        $result = array();
+
+        if($sql){
+                $query = mysqli_query($db, $sql);
+                $stat = auth()->user()->role;
+
+                array_push($result, array('role'=>$stat));
+
+                return response()->json(array("result"=>$result));
         }
         // Email atau Password salah
-        return redirect('/')->with('errors', 'Email atau Password anda Salah!');
+        return response()->json(array("result"=>'ERROR'));
+    }
+
+    // API Mobile logout
+    public function logoutAPI(){
+    	$logout = Auth::logout();
+    	return response()->json(array("result"=>$logout));
     }
 }

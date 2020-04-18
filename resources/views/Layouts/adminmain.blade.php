@@ -37,7 +37,7 @@
             <div class="d-sm-none d-lg-inline-block">Hai, {{auth()->user()->nama_user}}</div></a>
             <div class="dropdown-menu dropdown-menu-right">
               <a class="dropdown-item has-icon">
-                <i class="far fa-user"></i> {{auth()->user()->email}}
+                <i class="far fa-envelope"></i> {{auth()->user()->email}}
               </a>
               <div class="dropdown-divider"></div>
               <a href="{{url('/logout')}}" class="dropdown-item has-icon text-danger">
@@ -62,21 +62,21 @@
             <!-- List Menu Sebagai Admin -->
 
               <li id="dashboard" class="">
-                <a class="nav-link" href="{{url('/dashboard')}}"><i class="far fa-circle"></i> <span>Dashboard</span></a>
+                <a class="nav-link" href="{{url('/dashboard')}}"><i class="fa fa-home"></i> <span>Dashboard</span></a>
               </li>
               <hr class="sidebar-divider my-0">
               <li id="admin" class="">
-                <a class="nav-link" href="{{url('/admin')}}"><i class="far fa-circle"></i> <span>Admin</span></a>
+                <a class="nav-link" href="{{url('/admin')}}"><i class="fa fa-briefcase"></i> <span>Admin</span></a>
               </li>
               <li id="petugas" class="">
-                <a class="nav-link" href="{{url('/petugas')}}"><i class="far fa-circle"></i> <span>Petugas</span></a>
+                <a class="nav-link" href="{{url('/petugas')}}"><i class="fa fa-user"></i> <span>Petugas</span></a>
               </li>
               <li id="mahasiswa" class="">
-                <a class="nav-link" href="{{url('/mahasiswa')}}"><i class="far fa-circle"></i> <span>Mahasiswa</span></a>
+                <a class="nav-link" href="{{url('/mahasiswa')}}"><i class="fa fa-users"></i> <span>Mahasiswa</span></a>
               </li>
               <hr class="sidebar-divider my-0">
               <li id="laporan" class="">
-                <a class="nav-link" href="{{url('/laporan')}}"><i class="far fa-circle"></i> <span>Laporan</span></a>
+                <a class="nav-link" href="{{url('/laporan')}}"><i class="far fa-list-alt"></i> <span>Laporan</span></a>
               </li>
 
           </ul>

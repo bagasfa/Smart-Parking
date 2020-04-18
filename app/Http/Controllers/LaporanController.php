@@ -48,6 +48,12 @@ class LaporanController extends Controller
 
     // For Mobile API
 
+    public function indexAPI(){
+        $laporan = Laporan::all();
+        $json = response()->json(array('result' => $laporan));
+        return $json;
+    }
+
     public function createAPI(Request $request){
         $rand = rand(111111, 999999);
 
@@ -61,7 +67,9 @@ class LaporanController extends Controller
         return $json;
     }
 
-    public function updateAPI(Request $request, $id_laporan){
+    public function updateAPI(Request $request){
+        $id_laporan = $request->id_laporan;
+
         $laporan = Laporan::find($id_laporan);
         $laporan->keluar = date("d-m-Y H:i:s");
         $laporan->save();
