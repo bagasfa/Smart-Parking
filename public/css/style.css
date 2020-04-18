@@ -1,0 +1,49 @@
+
+ .bglogin{
+  position: absolute;
+  top: 50%; right: 50%;
+  transform: translate(50%,-50%);
+ }
+ .login-form{
+  background: rgb(0, 0, 0, 0.3);
+  width: 400px;
+  height: 400px;
+  color: #FFFFFF;
+  padding: 22px;
+  border-radius: 5px;
+  position: absolute;
+  top: 50%; right: 50%;
+  transform: translate(50%,-50%);
+ }
+ .login-form h1{
+  font-weight: bold;
+  font-size: 2.5rem;
+  margin-bottom: 50px;
+ }
+ .login-form form{
+  height: auto;
+ }
+ .login-form hr{
+  display: block; height: 1px;
+  border: 0; border-top: 1px solid #fff;
+  margin: 1em 0; padding: 0; 
+ }
+ .login-form button{
+  font-size: 16px;
+ }
+ .main-footer{
+  position: absolute;
+  bottom: 0
+ }
+ #clock{
+  font-family: 'Orbitron', sans-serif;
+  font-size: 50px;
+ }
+ #shadows{
+  height:20px;
+  border-radius:30px;
+  background:transparent;
+  width:200px;
+  box-shadow:300px 0 10px 2px rgba(0,0,0,0.4);
+  opacity: 1;
+ }
