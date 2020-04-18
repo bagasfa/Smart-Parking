@@ -20,7 +20,6 @@ class CreateLaporan extends Migration
             $table->string('kode_proses');
             $table->string('masuk');
             $table->string('keluar')->nullable();
-            $table->timestamps();
         });
     }
 

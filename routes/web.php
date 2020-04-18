@@ -50,8 +50,8 @@ Route::group(['middleware' => ['auth','checkRole:admin']], function(){
     // Laporan
     Route::get('/laporan', 'LaporanController@index');
     Route::post('/laporan/create', 'LaporanController@create');
-	Route::post('/laporan/{id_laporan}/delete','LaporanController@delete');
-    Route::post('/laporan/{id_laporan}/keluar', 'LaporanController@updateKeluar');
+	Route::get('/laporan/{id_laporan}/delete','LaporanController@delete');
+    Route::get('/laporan/{id_laporan}/keluar', 'LaporanController@updateKeluar');
     Route::get('/laporan/export', 'LaporanController@export');
 });
 
