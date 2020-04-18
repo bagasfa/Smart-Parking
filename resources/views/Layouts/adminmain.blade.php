@@ -37,7 +37,7 @@
             <div class="d-sm-none d-lg-inline-block">Hai, {{auth()->user()->nama_user}}</div></a>
             <div class="dropdown-menu dropdown-menu-right">
               <a class="dropdown-item has-icon">
-                <i class="far fa-envelope"></i> {{auth()->user()->email}}
+                <i class="far fa-envelope" style="padding-top: 2px;"></i> {{auth()->user()->email}}
               </a>
               <div class="dropdown-divider"></div>
               <a href="{{url('/logout')}}" class="dropdown-item has-icon text-danger">
@@ -69,7 +69,7 @@
                 <a class="nav-link" href="{{url('/admin')}}"><i class="fas fa-briefcase"></i> <span>Admin</span></a>
               </li>
               <li id="petugas" class="">
-                <a class="nav-link" href="{{url('/petugas')}}"><i class="fas fa-user"></i> <span>Petugas</span></a>
+                <a class="nav-link" href="{{url('/petugas')}}"><i class="fas fa-users"></i> <span>Petugas</span></a>
               </li>
               <li id="mahasiswa" class="">
                 <a class="nav-link" href="{{url('/mahasiswa')}}"><i class="fas fa-graduation-cap"></i> <span>Mahasiswa</span></a>
