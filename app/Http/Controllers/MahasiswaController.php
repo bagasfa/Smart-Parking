@@ -15,12 +15,6 @@ class MahasiswaController extends Controller
     	return view('Mahasiswa.index', compact('user'));
     }
 
-    public function api(){
-        $user = User::select('id', 'nama_user', 'email', 'role', 'nim', 'angkatan', 'fakultas')->where('role','mahasiswa')->get();
-        $json = response()->json(array('result' => $user));
-        return $json;
-    }
-
     public function create(Request $request){
     	$user = new User;
     	$user->nama_user = $request->nama_user;
@@ -71,5 +65,27 @@ class MahasiswaController extends Controller
             $user->save();
             return redirect('/mahasiswa')->with('message', 'Password berhasil diubah!');
         }
+    }
+
+    // For Mobile api
+
+    public function indexAPI(){
+        $user = User::select('id', 'nama_user', 'email', 'role', 'nim', 'angkatan', 'fakultas')->where('role','mahasiswa')->get();
+        $json = response()->json(array('result' => $user));
+        return $json;
+    }
+
+    public function createAPI(Request $request){
+        $user = new User;
+        $user->nama_user = $request->nama_user;
+        $user->email = $request->email;
+        $user->password = bcrypt($request->password);
+        $user->role = 'mahasiswa';
+        $user->nim = $request->nim;
+        $user->angkatan = $request->angkatan;
+        $user->fakultas = $request->fakultas;
+        $user->save();
+        $json = response()->json(array('result' => $user));
+        return $json;
     }
 }

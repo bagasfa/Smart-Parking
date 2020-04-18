@@ -15,12 +15,6 @@ class PetugasController extends Controller
     	return view('Petugas.index', compact('user'));
     }
 
-    public function api(){
-       $user = User::select('id', 'nama_user', 'email', 'role', 'nik', 'telfon', 'alamat')->where('role','petugas')->get();
-        $json = response()->json(array('result' => $user));
-        return $json;
-    }
-
     public function create(Request $request){
     	$user = new User;
     	$user->nama_user = $request->nama_user;
@@ -71,5 +65,12 @@ class PetugasController extends Controller
             $user->save();
             return redirect('/petugas')->with('message', 'Password berhasil diubah!');
         }
+    }
+
+    // For Mobile API
+    public function indexAPI(){
+       $user = User::select('id', 'nama_user', 'email', 'role', 'nik', 'telfon', 'alamat')->where('role','petugas')->get();
+        $json = response()->json(array('result' => $user));
+        return $json;
     }
 }

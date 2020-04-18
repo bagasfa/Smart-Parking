@@ -13,6 +13,17 @@ use Illuminate\Http\Request;
 |
 */
 
-Route::middleware('auth:api')->get('/user', function (Request $request) {
-    return $request->user();
-});
+// Route::middleware('auth:api')->get('/user', function (Request $request) {
+//     return $request->user();
+// });
+
+	// API Mobile Petugas
+	Route::get('/petugas', 'PetugasController@indexAPI');
+
+	// API Mobile Mahasiswa
+	Route::get('/mahasiswa', 'MahasiswaController@indexAPI');
+	Route::post('/mahasiswa/create', 'MahasiswaController@createAPI');
+
+	// API Mobile Laporan / Petugas
+	Route::post('/laporan/create', 'LaporanController@createAPI');
+	Route::post('/laporan/{id_laporan}/keluar', 'LaporanController@updateAPI');

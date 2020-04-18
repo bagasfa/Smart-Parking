@@ -127,6 +127,7 @@
         <div class="form-group">
             <label for="inputFakultas">Fakultas <i style="color: red;">*</i></label>
             <select name="fakultas" class="form-control" required="">
+              <option hidden="">-- Pilih Fakultas --</option>
               <option value="Fakultas Ekonomi Bisnis">Fakultas Ekonomi Bisnis</option>
               <option value="Fakultas Hukum">Fakultas Hukum</option>
               <option value="Fakultas Ilmu Administrasi">Fakultas Ilmu Administrasi</option>

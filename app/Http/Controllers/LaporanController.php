@@ -44,4 +44,28 @@ class LaporanController extends Controller
     public function export(){
         return Excel::download(new LaporanExport, 'siswa-'.date("d-m-Y").'.xlsx');
     }
+
+
+    // For Mobile API
+
+    public function createAPI(Request $request){
+        $rand = rand(111111, 999999);
+
+        $laporan = new Laporan;
+        $laporan->qr_code = $request->qr_code;
+        $laporan->plat_nomor = $request->plat_nomor;
+        $laporan->kode_proses = "UB-".$rand;
+        $laporan->masuk = date("d-m-Y H:i:s");
+        $laporan->save();
+        $json = response()->json(array('result' => $laporan));
+        return $json;
+    }
+
+    public function updateAPI(Request $request, $id_laporan){
+        $laporan = Laporan::find($id_laporan);
+        $laporan->keluar = date("d-m-Y H:i:s");
+        $laporan->save();
+        $json = response()->json(array('result' => $laporan));
+        return $json;
+    }
 }

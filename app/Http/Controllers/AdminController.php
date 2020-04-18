@@ -15,12 +15,6 @@ class AdminController extends Controller
     	return view('Admin.index', compact('user'));
     }
 
-    public function api(){
-       $user = User::select('id', 'nama_user', 'email', 'role', 'nik', 'telfon', 'alamat')->where('role','admin')->get();
-        $json = response()->json(array("result" => $user));
-        return $json;
-    }
-
     public function create(Request $request){
     	$user = new User;
     	$user->nama_user = $request->nama_user;
