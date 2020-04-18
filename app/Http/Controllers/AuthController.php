@@ -19,8 +19,10 @@ class AuthController extends Controller
     	if(Auth::attempt($request->only('email','password'))){
 
     		if(auth()->user()->role == 'petugas'){
+                Auth::logout();
     			return redirect('/')->with('error', 'Silahkan Login sebagai Petugas di Aplikasi Mobile !');
     		}else if(auth()->user()->role == 'mahasiswa'){
+                Auth::logout();
     			return redirect('/')->with('error', 'Silahkan Login sebagai Mahasiswa di Aplikasi Mobile !');
     		}else{
 
