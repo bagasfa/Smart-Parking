@@ -14,7 +14,7 @@
 		<li>Buatlah database <b>smart_parking</b> pada localhost anda.</li>
 		<li>Extract repo yang telah anda download tadi ke dalam folder <b>xampp/htdocs/-->(disini)<--</b></li>
 		<li>Lalu rename folder <b>Smart-Parking-master</b> menjadi <b>Smart-Parking</b></li>
-		<li>Rename file <b>.env.example</b> menjadi <b>.env</b> yang berada di local directory Smart-Parking</li>
+		<li>Rename file <b>.env.example</b> menjadi <b>.env</b> yang berada di dalam directory Smart-Parking</li>
 		<li>Buka command prompt yang mengarah ke directory Smart-Parking.</li>
 		<li>Jalankan perintah berikut :
 			<ul>
