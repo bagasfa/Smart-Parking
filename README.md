@@ -8,7 +8,6 @@
 </p>
 
 <h1>Cara Penggunaan</h1>
-<hr>
 	<ul>
 		<li>Download repo ini ke local anda.</li>
 		<li>Download Composer terlebih dahulu disini <a href="https://getcomposer.org/Composer-Setup.exe">Composer</a></li>
@@ -33,6 +32,6 @@
 		<li>Silahkan login dengan senang hati :)</li>
 	</ul>
 
-## License
+<h1>License</h1>
 
 The Laravel framework is open-sourced software licensed under the [MIT license](https://opensource.org/licenses/MIT).
