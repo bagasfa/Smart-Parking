@@ -1,6 +1,6 @@
 <p align="center"><img src="https://raw.githubusercontent.com/bagasfa/Smart-Parking/master/public/assets/img/logo.png" width="200"></p>
 
-<center><h1>Smart Parking</h1></center>
+<h1 align="center">Smart Parking</h1>
 
 <h2>Cara Penggunaan</h2>
 	<ul>
