@@ -1,7 +1,7 @@
  .bglogin{
   position: absolute;
   z-index: 1050;
-  top: 23.5%; right: 50%;
+  top: 30%; right: 50%;
   transform: translate(50%,-50%);
  }
  .login-form{

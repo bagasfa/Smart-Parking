@@ -1,21 +1,22 @@
 @extends('layouts.main')
 
 @section('content')
-<marquee direction="left" scrollamount="20"><h1>تسجيل الدخول</h1></marquee>
-<marquee direction="right" scrollamount="20"><h1>Авторизоваться</h1></marquee>
-<marquee direction="left" scrollamount="20"><h1>Mlebu</h1></marquee>
-<marquee direction="right" scrollamount="20"><h1>เข้าสู่ระบบ</h1></marquee>
-<marquee direction="left" scrollamount="20"><h1>ログインする</h1></marquee>
-<marquee direction="right" scrollamount="20"><h1>Anmeldung</h1></marquee>
-<marquee direction="left" scrollamount="20"><h1>लॉग इन करें</h1></marquee>
-<marquee direction="right" scrollamount="20"><h1>Idħol</h1></marquee>
-<marquee direction="left" scrollamount="20"><h1>Σύνδεση</h1></marquee>
-<marquee direction="right" scrollamount="20"><h1>로그인</h1></marquee>
-<marquee direction="left" scrollamount="20"><h1>Ngena ngemvume</h1></marquee>
-<marquee direction="left" scrollamount="20"><h1>Σύνδεση</h1></marquee>
-<marquee direction="right" scrollamount="20"><h1>로그인</h1></marquee>
-<marquee direction="left" scrollamount="20"><h1>Ngena ngemvume</h1></marquee>
-
+<div style="padding-top: 5%;">
+  <marquee direction="left" scrollamount="20"><h1>تسجيل الدخول</h1></marquee>
+  <marquee direction="right" scrollamount="20"><h1>Авторизоваться</h1></marquee>
+  <marquee direction="left" scrollamount="20"><h1>Mlebu</h1></marquee>
+  <marquee direction="right" scrollamount="20"><h1>เข้าสู่ระบบ</h1></marquee>
+  <marquee direction="left" scrollamount="20"><h1>ログインする</h1></marquee>
+  <marquee direction="right" scrollamount="20"><h1>Anmeldung</h1></marquee>
+  <marquee direction="left" scrollamount="20"><h1>लॉग इन करें</h1></marquee>
+  <marquee direction="right" scrollamount="20"><h1>Idħol</h1></marquee>
+  <marquee direction="left" scrollamount="20"><h1>Σύνδεση</h1></marquee>
+  <marquee direction="right" scrollamount="20"><h1>로그인</h1></marquee>
+  <marquee direction="left" scrollamount="20"><h1>Log in</h1></marquee>
+  <marquee direction="left" scrollamount="20"><h1>Logáil isteach</h1></marquee>
+  <marquee direction="right" scrollamount="20"><h1>Accesso</h1></marquee>
+  <marquee direction="left" scrollamount="20"><h1>登录</h1></marquee>
+</div>
 <div class="container min-vh-95 mt-5">
 
   <div class="bglogin">
