@@ -1,4 +1,4 @@
-<center>![public/assets/img](logo.png)</center>
+<center>![img](logo.png)</center>
 
 <p align="center">
 <a href="https://travis-ci.org/laravel/framework"><img src="https://travis-ci.org/laravel/framework.svg" alt="Build Status"></a>
