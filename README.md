@@ -25,7 +25,8 @@
 			</ul>
 		</li>
 		<li>Buka browser anda dan ketikan " localhost:8000 " pada url browser anda.</li>
-		<li>Email dan password dapat anda lihat pada database <b>smart_parking</b> > tabel <b>user</b>. (password ter-enkripsi menggunakan metode Hashing bCrypt)</li>
+		<li>Email dan password dapat anda lihat pada database <b>smart_parking</b> > tabel <b>user</b>.
+			<br>(password ter-enkripsi menggunakan metode Hashing bCrypt)</li>
 		<li><u>Email</u> digenerate secara random</li>
 		<li><u>Passwordnya</u> adalah <b>password</b></li>
 		<li>Silahkan login dengan senang hati :)</li>
