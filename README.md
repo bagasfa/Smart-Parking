@@ -7,7 +7,8 @@
 <a href="https://packagist.org/packages/laravel/framework"><img src="https://poser.pugx.org/laravel/framework/license.svg" alt="License"></a>
 </p>
 
-## Cara Penggunaan
+<h1>Cara Penggunaan</h1>
+<hr>
 	<ul>
 		<li>Download repo ini ke local anda.</li>
 		<li>Download Composer terlebih dahulu disini <a href="https://getcomposer.org/Composer-Setup.exe">Composer</a></li>
