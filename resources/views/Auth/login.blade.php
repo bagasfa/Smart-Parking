@@ -17,7 +17,7 @@
 <div class="container min-vh-95 mt-5">
 
   <div class="bglogin">
-    <img src="../assets/img/logo.png" width="120">
+    <img src="{{url('assets/img/logo.png')}}" width="120">
   </div>
     <div class="login-form center mb-5">
       <h1>&nbsp;</h1>
