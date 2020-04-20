@@ -1,6 +1,7 @@
 @extends('layouts.main')
 
 @section('content')
+//ini bagus
 <marquee direction="left" scrollamount="20"><h1>تسجيل الدخول</h1></marquee>
 <marquee direction="right" scrollamount="20"><h1>Авторизоваться</h1></marquee>
 <marquee direction="left" scrollamount="20"><h1>Mlebu</h1></marquee>
