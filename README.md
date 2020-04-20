@@ -1,12 +1,8 @@
-<p align="center"><img src="https://raw.githubusercontent.com/bagasfa/Smart-Parking/master/public/assets/img/logo.png" width="400"></p>
+<p align="center"><img src="https://raw.githubusercontent.com/bagasfa/Smart-Parking/master/public/assets/img/logo.png" width="200"></p>
 
-<p align="center">
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://poser.pugx.org/laravel/framework/d/total.svg" alt="Total Downloads"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://poser.pugx.org/laravel/framework/v/stable.svg" alt="Latest Stable Version"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://poser.pugx.org/laravel/framework/license.svg" alt="License"></a>
-</p>
+<center><h1>Smart Parking</h1></center>
 
-<h1>Cara Penggunaan</h1>
+<h2>Cara Penggunaan</h2>
 	<ul>
 		<li>Download repo ini ke local anda.</li>
 		<li>Download Composer terlebih dahulu disini <a href="https://getcomposer.org/Composer-Setup.exe">Composer</a></li>
@@ -31,7 +27,3 @@
 		<li><u>Passwordnya</u> adalah <b>password</b></li>
 		<li>Silahkan login dengan senang hati :)</li>
 	</ul>
-
-<h1>License</h1>
-
-The Laravel framework is open-sourced software licensed under the [MIT license](https://opensource.org/licenses/MIT).
