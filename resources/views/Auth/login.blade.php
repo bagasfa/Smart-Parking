@@ -1,7 +1,6 @@
 @extends('layouts.main')
 
 @section('content')
-//ini bagus
 <marquee direction="left" scrollamount="20"><h1>تسجيل الدخول</h1></marquee>
 <marquee direction="right" scrollamount="20"><h1>Авторизоваться</h1></marquee>
 <marquee direction="left" scrollamount="20"><h1>Mlebu</h1></marquee>
@@ -10,6 +9,9 @@
 <marquee direction="right" scrollamount="20"><h1>Anmeldung</h1></marquee>
 <marquee direction="left" scrollamount="20"><h1>लॉग इन करें</h1></marquee>
 <marquee direction="right" scrollamount="20"><h1>Idħol</h1></marquee>
+<marquee direction="left" scrollamount="20"><h1>Σύνδεση</h1></marquee>
+<marquee direction="right" scrollamount="20"><h1>로그인</h1></marquee>
+<marquee direction="left" scrollamount="20"><h1>Ngena ngemvume</h1></marquee>
 <marquee direction="left" scrollamount="20"><h1>Σύνδεση</h1></marquee>
 <marquee direction="right" scrollamount="20"><h1>로그인</h1></marquee>
 <marquee direction="left" scrollamount="20"><h1>Ngena ngemvume</h1></marquee>
