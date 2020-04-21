@@ -8,12 +8,13 @@
 <section class="section">
 
   <div class="section-header">
-    <h1>Petugas</h1>
+    <marquee scrollamount="150" behavior="slide"><h1>Petugas</h1></marquee>
   </div>
 
   <div class="section-body">
     <div class="col-12 col-md-12 col-lg-12">
         <div class="card">
+          <marquee direction="down" scrollamount="50" behavior="slide">
           <div class="card-header">
             <form method="GET" class="form-inline">
               <div class="form-group">
@@ -30,7 +31,8 @@
           <div class="card-header">
             <button type="button" data-toggle="modal" data-target="#addData" class="btn btn-primary"><i class="fa fa-plus"></i> Tambah Petugas</button>
           </div>
-
+          </marquee>
+          <marquee direction="up" scrollamount="50" behavior="slide">
           <div class="card-body table-responsive">
             <table class="table table-bordered table-hover">
               <thead>
@@ -82,6 +84,7 @@
             </table>
             <div class="pull-right">{{ $user->links() }}</div>
           </div>
+          </marquee>
           <div class="card-footer text-right">
             <nav class="d-inline-block">
 

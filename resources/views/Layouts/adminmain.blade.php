@@ -11,10 +11,12 @@
 
   <!-- Online CSS Files -->
   <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
+  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@500&display=swap" rel="stylesheet">
 
   <!-- Offline CSS -->
   <link rel="stylesheet" href="{{asset('css/bootstrap.css')}}">
-  <link rel="stylesheet" href="{{asset('css/toastr.min.css')}}">
+  <link rel="stylesheet" href="{{asset('css/toastr.css')}}">
+  <link rel="stylesheet" href="{{ asset('css/style.css') }}">
   <link rel="stylesheet" href="{{ asset('assets/css/style.css') }}">
   <link rel="stylesheet" href="{{ asset('assets/css/components.css') }}">
 </head>
@@ -66,17 +68,17 @@
               </li>
               <hr class="sidebar-divider my-0">
               <li id="admin" class="">
-                <a class="nav-link" href="{{url('/admin')}}"><i class="fas fa-briefcase"></i> <span>Admin</span></a>
+                <a class="nav-link" href="{{url('/admin')}}"><i class="fas fa-user-secret"></i> <span>Admin</span></a>
               </li>
               <li id="petugas" class="">
-                <a class="nav-link" href="{{url('/petugas')}}"><i class="fas fa-users"></i> <span>Petugas</span></a>
+                <a class="nav-link" href="{{url('/petugas')}}"><i class="fas fa-user"></i> <span>Petugas</span></a>
               </li>
               <li id="mahasiswa" class="">
-                <a class="nav-link" href="{{url('/mahasiswa')}}"><i class="fas fa-graduation-cap"></i> <span>Mahasiswa</span></a>
+                <a class="nav-link" href="{{url('/mahasiswa')}}"><i class="fas fa-users"></i> <span>Mahasiswa</span></a>
               </li>
               <hr class="sidebar-divider my-0">
               <li id="laporan" class="">
-                <a class="nav-link" href="{{url('/laporan')}}"><i class="fas fa-list-alt"></i> <span>Laporan</span></a>
+                <a class="nav-link" href="{{url('/laporan')}}"><i class="fas fa-server"></i> <span>Laporan</span></a>
               </li>
 
           </ul>
@@ -102,6 +104,7 @@
   <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.nicescroll/3.7.6/jquery.nicescroll.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.24.0/moment.min.js"></script>
+  <script src="https://use.fontawesome.com/7d44cdf850.js"></script>
 
 
   <!-- Offline JS File -->

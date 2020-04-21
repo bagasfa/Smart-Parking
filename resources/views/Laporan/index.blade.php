@@ -8,12 +8,13 @@
 <section class="section">
 
   <div class="section-header">
-    <h1>Laporan</h1>
+    <marquee scrollamount="150" behavior="slide"><h1>Laporan</h1></marquee>
   </div>
 
   <div class="section-body">
     <div class="col-12 col-md-12 col-lg-12">
         <div class="card">
+          <marquee direction="down" scrollamount="25" behavior="slide">
           <div class="card-header">
             <form method="GET" class="form-inline">
               <div class="form-group">
@@ -33,7 +34,8 @@
                 <button class="btn btn-success">Export Excel</button>
             </a>
           </div>
-
+          </marquee>
+          <marquee direction="up" scrollamount="50" behavior="slide">
           <div class="card-body table-responsive">
             <table class="table table-bordered table-hover">
                 <thead>
@@ -81,6 +83,7 @@
               </table>
               <div class="pull-right">{{ $laporan->links() }}</div>
           </div>
+          </marquee>
           <div class="card-footer text-right">
             <nav class="d-inline-block">
 

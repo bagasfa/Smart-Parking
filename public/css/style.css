@@ -1,14 +1,13 @@
- .bglogin{
-  position: absolute;
-  z-index: 1050;
-  top: 30%; right: 50%;
-  transform: translate(50%,-50%);
- }
+.bglogin{
+  width: 120px;
+  height: 120px;
+  margin: -85px auto -20px auto;
+}
  .login-form{
   background: rgb(0, 0, 0, 0.3);
   width: 400px;
   height: 400px;
-  color: #FFFFFF;
+  color: #007bff ;
   padding: 22px;
   border-radius: 5px;
   position: absolute;
@@ -32,15 +31,19 @@
  .login-form button{
   font-size: 16px;
  }
+ #micon{
+  font-size: 36px;
+ }
  .main-footer{
   position: absolute;
   bottom: 0
  }
  #clock{
   font-family: 'Orbitron', sans-serif;
+  color: #21242d;
   font-size: 50px;
  }
- #shadows{
+ #shadow{
   height:20px;
   border-radius:30px;
   background:transparent;
@@ -48,9 +51,16 @@
   box-shadow:300px 0 10px 2px rgba(0,0,0,0.4);
   opacity: 1;
  }
- .marq{
-     position: absolute;
-     z-index: -1;
-     top: 10%;
-
+ .marquee{
+  margin-top: -25px;
+  width: 100%;
+  position: absolute;
+  top: 50%; right: 50%;
+  transform: translate(50%,-50%);
  }
+ .marquee h1{
+  font-size: 3vh;
+ }
+ .nounderline {
+  text-decoration: none !important;
+}

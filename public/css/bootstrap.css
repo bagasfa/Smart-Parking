@@ -7534,6 +7534,10 @@ button.bg-dark:focus {
   margin-top: 3rem !important;
 }
 
+.mt-7{
+  margin-top: 5rem
+}
+
 .mr-5,
 .mx-5 {
   margin-right: 3rem !important;
