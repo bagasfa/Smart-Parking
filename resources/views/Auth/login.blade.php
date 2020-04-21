@@ -45,9 +45,6 @@
               <a href=""><i class="fa fa-eye-slash" aria-hidden="true"></i></a>
           </div>
         </div></marquee>
-        <div class="invalid-feedback">
-                  Harap Isi Password
-                </div>
         <div class="mt-5">
           <button class="btn btn-md btn-primary btn-block" type="submit">Log in</button>
         </div>
