@@ -1,6 +1,9 @@
 @extends('layouts.main')
 
 @section('content')
+<script type="text/javascript">
+  document.title="Log in";
+</script>
 <div class="marquee">
   <marquee direction="left" scrollamount="20"><h1 class="text-info">تسجيل الدخول</h1></marquee>
   <marquee direction="right" scrollamount="20"><h1 class="text-secondary">Авторизоваться</h1></marquee>
