@@ -18,6 +18,7 @@ class CreateUser extends Migration
             $table->string('nama_user');
             $table->string('email')->unique();
             $table->string('password');
+            $table->string('pass_kotlin')->nullable();
             $table->string('role');
             $table->string('nim')->unique()->nullable();
             $table->string('nik')->unique()->nullable();
