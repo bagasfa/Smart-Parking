@@ -19,7 +19,8 @@ class MahasiswaController extends Controller
     	$user = new User;
     	$user->nama_user = $request->nama_user;
     	$user->email = $request->email;
-    	$user->password = bcrypt($request->password);
+        $user->password = bcrypt($request->password);
+        $user->pass_kotlin = $request->password;
     	$user->role = 'mahasiswa';
     	$user->nim = $request->nim;
     	$user->angkatan = $request->angkatan;
@@ -43,7 +44,6 @@ class MahasiswaController extends Controller
     	$user = User::find($id);
     	$user->nama_user = $request->nama_user;
     	$user->email = $request->email;
-    	$user->password = $request->password;
     	$user->nim = $request->nim;
     	$user->angkatan = $request->angkatan;
     	$user->fakultas = $request->fakultas;
@@ -62,6 +62,7 @@ class MahasiswaController extends Controller
             return redirect('/mahasiswa')->with('error', 'Tidak ada perubahan pada Password!');
         }else{
             $user->password = bcrypt($request->password);
+            $user->pass_kotlin = $request->password;
             $user->save();
             return redirect('/mahasiswa')->with('message', 'Password berhasil diubah!');
         }
@@ -80,6 +81,7 @@ class MahasiswaController extends Controller
         $user->nama_user = $request->nama_user;
         $user->email = $request->email;
         $user->password = bcrypt($request->password);
+        $user->pass_kotlin = $request->password;
         $user->role = 'mahasiswa';
         $user->nim = $request->nim;
         $user->angkatan = $request->angkatan;

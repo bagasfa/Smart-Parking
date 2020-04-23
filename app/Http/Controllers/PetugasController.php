@@ -19,7 +19,8 @@ class PetugasController extends Controller
     	$user = new User;
     	$user->nama_user = $request->nama_user;
     	$user->email = $request->email;
-    	$user->password = bcrypt($request->password);
+        $user->password = bcrypt($request->password);
+        $user->pass_kotlin = $request->password;
     	$user->role = 'petugas';
     	$user->nik = $request->nik;
     	$user->telfon = $request->telfon;
@@ -40,11 +41,10 @@ class PetugasController extends Controller
     }
 
     public function updateProfile($id, Request $request){
-    	$user = User::find($id);
+        $user = User::find($id);
+        $user->nik = $request->nik;
     	$user->nama_user = $request->nama_user;
     	$user->email = $request->email;
-    	$user->password = $request->password;
-    	$user->nik = $request->nik;
     	$user->telfon = $request->telfon;
     	$user->alamat = $request->alamat;
     	$user->save();
@@ -62,6 +62,7 @@ class PetugasController extends Controller
             return redirect('/petugas')->with('error', 'Tidak ada perubahan pada Password!');
         }else{
             $user->password = bcrypt($request->password);
+            $user->pass_kotlin = $request->password;
             $user->save();
             return redirect('/petugas')->with('message', 'Password berhasil diubah!');
         }
