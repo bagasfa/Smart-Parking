@@ -1,4 +1,4 @@
-@extends('layouts.adminmain')
+@extends('Layouts.adminmain')
 
 @section('content')
 <script type="text/javascript">
