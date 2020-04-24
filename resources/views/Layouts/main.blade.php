@@ -7,18 +7,18 @@
   <title></title>
 
   <!-- Logo title -->
-  <link rel="shortcut icon" type="image/x-icon" href="{{secure_asset('assets/img/logo.png')}}">
+  <link rel="shortcut icon" type="image/x-icon" href="{{asset('assets/img/logo.png')}}">
 
   <!-- Online CSS Files -->
   <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
   <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@500&display=swap" rel="stylesheet">
 
   <!-- Offline CSS -->
-  <link rel="stylesheet" href="{{secure_asset('css/bootstrap.css')}}">
-  <link rel="stylesheet" href="{{secure_asset('css/style.css')}}">
-  <link rel="stylesheet" href="{{secure_asset('css/toastr.css')}}">
-  <link rel="stylesheet" href="{{ secure_asset('assets/css/style.css') }}">
-  <link rel="stylesheet" href="{{ secure_asset('assets/css/components.css') }}">
+  <link rel="stylesheet" href="{{asset('css/bootstrap.css')}}">
+  <link rel="stylesheet" href="{{asset('css/style.css')}}">
+  <link rel="stylesheet" href="{{asset('css/toastr.css')}}">
+  <link rel="stylesheet" href="{{ asset('assets/css/style.css') }}">
+  <link rel="stylesheet" href="{{ asset('assets/css/components.css') }}">
 </head>
 
 <body>
@@ -44,12 +44,12 @@
 
 
   <!-- Offline JS File -->
-  <script type="text/javascript" src="{{secure_asset('assets/js/bootstrap-show-password.js')}}"></script>
-  <script src="{{secure_asset('js/toastr.min.js')}}"></script>
-  <script src="{{secure_asset('js/bootstrap.js')}}"></script>
-  <script src="{{ secure_asset('assets/js/stisla.js') }}"></script>
-  <script src="{{ secure_asset('assets/js/scripts.js') }}"></script>
-  <script src="{{ secure_asset('assets/js/custom.js') }}"></script>
+  <script type="text/javascript" src="{{asset('assets/js/bootstrap-show-password.js')}}"></script>
+  <script src="{{asset('js/toastr.min.js')}}"></script>
+  <script src="{{asset('js/bootstrap.js')}}"></script>
+  <script src="{{ asset('assets/js/stisla.js') }}"></script>
+  <script src="{{ asset('assets/js/scripts.js') }}"></script>
+  <script src="{{ asset('assets/js/custom.js') }}"></script>
 
   <!-- Jam -->
   <script type="text/javascript">
