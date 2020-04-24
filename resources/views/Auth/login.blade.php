@@ -44,9 +44,9 @@
         <marquee direction="up" behavior="slide" scrollamount="10.5">
         <div class="input-group mt-3" id="show_hide_password">
           <input type="password" id="inputPassword" class="form-control" name="password" placeholder="Password" required>
-          <div class="input-group-addon eye">
-              <a href=""><i class="fa fa-eye-slash" aria-hidden="true"></i></a>
-          </div>
+          <a href=""><div class="input-group-addon eye">
+              <i class="fa fa-eye-slash" aria-hidden="true"></i>
+          </div></a>
         </div></marquee>
         <div class="mt-5">
           <button class="btn btn-md btn-primary btn-block" type="submit">Log in</button>
