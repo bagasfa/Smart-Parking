@@ -1,11 +1,15 @@
 @extends('layouts.adminmain')
 
 @section('content')
+<script type="text/javascript">
+  document.title="Edit Mahasiswa";
+  document.getElementById('mahasiswa').classList.add('active');
+</script>
 <section class="section">
   
   <div class="section-header">
     <h1>
-      Mahasiswa <small>Edit Profile</small>
+      Mahasiswa <small>Edit Data</small>
     </h1>
   </div>
 
@@ -34,7 +38,15 @@
                   <label for="inputEmail">E-mail</label>
                   <input name="email" type="email" class="form-control" id="inputEmail" placeholder="E-mail" value="{{ $user->email }}" required="">
               </div>
-              <input type="hidden" name="password" value="{{ $user->password }}">
+              <div class="form-group">
+                  <label for="inputPassword">Password <i style="color: red;">*</i></label>
+                  <div class="input-group" id="show_hide_password">
+                    <input name="password" type="password" minlength="8" class="form-control" id="inputPassword" placeholder="Password" value="{{ $user->pass_kotlin }}" required="">
+                    <a href=""><div class="input-group-addon eye">
+                      <i class="fa fa-eye-slash" aria-hidden="true"></i>
+                    </div></a>
+                  </div>
+              </div>
               <div class="form-group">
                   <label for="inputAngkatan">Angkatan <i style="color: red;">*</i></label>
                   <input name="angkatan" type="number" maxlength="4" class="form-control" id="inputAngkatan" value="{{ $user->angkatan }}" placeholder="Angkatan" required="">

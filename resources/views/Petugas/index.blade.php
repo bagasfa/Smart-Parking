@@ -56,15 +56,9 @@
                   <td>{{ $petugas->telfon }}</td>
                   <td>{{ $petugas->alamat }}</td>
                   <td align="center">
-                    <a href="{{url('petugas/'.$petugas->id. '/editProfile')}}">
-                      <button type="button" class="btn btn-outline-primary" data-toggle="tooltip" data-placement="top" title="Edit Profile">
-                        <i class="fas fa-edit"></i> Profile
-                      </button>
-                    </a>
-                    &nbsp;
-                    <a href="{{url('petugas/'.$petugas->id. '/editPass')}}">
-                      <button type="button" class="btn btn-outline-warning" data-toggle="tooltip" data-placement="top" title="Edit Password">
-                        <i class="fas fa-edit"></i> Password
+                    <a href="{{url('petugas/'.$petugas->id. '/edit')}}">
+                      <button type="button" class="btn btn-outline-primary" data-toggle="tooltip" data-placement="top" title="Edit">
+                        <i class="fas fa-edit"></i>
                       </button>
                     </a>
                     &nbsp;
@@ -119,10 +113,11 @@
             <label for="inputPassword">Password <i style="color: red;">*</i></label>
             <div class="input-group" id="show_hide_password">
               <input name="password" type="password" minlength="8" class="form-control" id="inputPassword" placeholder="Password" required="">
-            <div class="input-group-addon eye">
-              <a href=""><i class="fa fa-eye-slash" aria-hidden="true"></i></a>
+              <a href=""><div class="input-group-addon eye">
+                <i class="fa fa-eye-slash" aria-hidden="true"></i>
+              </div></a>
             </div>
-        </div><br>
+        </div>
         <div class="form-group">
             <label for="inputTelp">No. Telpon <i style="color: red;">*</i></label>
             <input name="telfon" type="tel" maxlength="12" class="form-control" id="inputTelp" placeholder="Nomor Telpon" required="">

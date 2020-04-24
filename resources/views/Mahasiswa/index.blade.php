@@ -56,16 +56,12 @@
                   <td>{{ $mahasiswa->angkatan }}</td>
                   <td>{{ $mahasiswa->fakultas }}</td>
                   <td align="center">
-                    <a href="{{url('mahasiswa/'.$mahasiswa->id. '/editProfile')}}">
-                      <button type="button" class="btn btn-outline-primary" data-toggle="tooltip" data-placement="top" title="Edit Profile">
-                        <i class="fas fa-edit"></i> Profile
+                    <a href="{{url('mahasiswa/'.$mahasiswa->id. '/edit')}}">
+                      <button type="button" class="btn btn-outline-primary" data-toggle="tooltip" data-placement="top" title="Edit">
+                        <i class="fas fa-edit"></i>
                       </button>
                     </a>
-                    <a href="{{url('mahasiswa/'.$mahasiswa->id. '/editPass')}}">
-                      <button type="button" class="btn btn-outline-warning" data-toggle="tooltip" data-placement="top" title="Edit Password">
-                        <i class="fas fa-edit"></i> Password
-                      </button>
-                    </a>
+                    &nbsp;
                     <a href="{{url('mahasiswa/'.$mahasiswa->id. '/delete')}}">
                       <button type="button" class="btn btn-outline-danger" data-toggle="tooltip" data-placement="top" title="Hapus">
                         <i class="fas fa-trash"></i>
@@ -116,10 +112,11 @@
             <label for="inputPassword">Password <i style="color: red;">*</i></label>
             <div class="input-group" id="show_hide_password">
               <input name="password" type="password" minlength="8" class="form-control" id="inputPassword" placeholder="Password" required="">
-            <div class="input-group-addon eye">
-              <a href=""><i class="fa fa-eye-slash" aria-hidden="true"></i></a>
+              <a href=""><div class="input-group-addon eye">
+                <i class="fa fa-eye-slash" aria-hidden="true"></i>
+              </div></a>
             </div>
-        </div><br>
+        </div>
         <div class="form-group">
             <label for="inputAngkatan">Angkatan <i style="color: red;">*</i></label>
             <input name="angkatan" type="number" maxlength="4" class="form-control" id="inputAngkatan" placeholder="Angkatan" required="">

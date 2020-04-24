@@ -16,6 +16,10 @@ class PetugasController extends Controller
     }
 
     public function create(Request $request){
+        $validateData = $request->validate([
+            'email' => 'required|unique:user,email',
+            'nik' => 'required|unique:user,nik'
+        ]);
     	$user = new User;
     	$user->nama_user = $request->nama_user;
     	$user->email = $request->email;
@@ -35,37 +39,26 @@ class PetugasController extends Controller
     	return redirect('/petugas')->with('message', 'Data Petugas berhasil dihapus!');
     }
 
-    public function editProfile($id){
+    public function edit($id){
     	$user = User::findOrFail($id);
-    	return view('Petugas.editProfile', compact('user'));
+    	return view('Petugas.edit', compact('user'));
     }
 
-    public function updateProfile($id, Request $request){
+    public function update($id, Request $request){
         $user = User::find($id);
+        $validateData = $request->validate([
+            'email' => 'required|unique:user,email,'.$user->id,
+            'nik' => 'required|unique:user,nik,'.$user->id
+        ]);
         $user->nik = $request->nik;
     	$user->nama_user = $request->nama_user;
     	$user->email = $request->email;
+        $user->password = bcrypt($request->password);
+        $user->pass_kotlin = $request->password;
     	$user->telfon = $request->telfon;
     	$user->alamat = $request->alamat;
     	$user->save();
     	return redirect('/petugas')->with('message', 'Data Petugas berhasil Diperbarui!');
-    }
-
-    public function editPass($id){
-    	$user = User::findOrFail($id);
-    	return view('Petugas.editPassword', compact('user'));
-    }
-
-    public function updatePass($id, Request $request){
-    	$user = User::find($id);
-    	if($request->password == $user->password){
-            return redirect('/petugas')->with('error', 'Tidak ada perubahan pada Password!');
-        }else{
-            $user->password = bcrypt($request->password);
-            $user->pass_kotlin = $request->password;
-            $user->save();
-            return redirect('/petugas')->with('message', 'Password berhasil diubah!');
-        }
     }
 
     // For Mobile API

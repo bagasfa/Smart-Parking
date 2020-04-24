@@ -56,15 +56,9 @@
                   <td>{{ $admin->telfon }}</td>
                   <td>{{ $admin->alamat }}</td>
                   <td align="center">
-                    <a href="{{url('admin/'.$admin->id. '/editProfile')}}">
-                      <button type="button" class="btn btn-outline-primary" data-toggle="tooltip" data-placement="top" title="Edit Profile">
-                        <i class="fas fa-edit"></i> Profile
-                      </button>
-                    </a>
-                    &nbsp;
-                    <a href="{{url('admin/'.$admin->id. '/editPass')}}">
-                      <button type="button" class="btn btn-outline-warning" data-toggle="tooltip" data-placement="top" title="Edit Password">
-                        <i class="fas fa-edit"></i> Password
+                    <a href="{{url('admin/'.$admin->id.'/edit')}}">
+                      <button type="button" class="btn btn-outline-primary" data-toggle="tooltip" data-placement="top" title="Edit">
+                        <i class="fas fa-edit"></i>
                       </button>
                     </a>
                     &nbsp;

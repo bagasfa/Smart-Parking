@@ -24,28 +24,22 @@ Route::group(['middleware' => ['auth','checkRole:admin']], function(){
 	Route::get('/admin', 'AdminController@index');
 	Route::post('/admin/create', 'AdminController@create');
 	Route::get('/admin/{id}/delete','AdminController@delete');
-	Route::get('/admin/{id}/editProfile', 'AdminController@editProfile');
-	Route::post('/admin/{id}/updateProfile', 'AdminController@updateProfile');
-	Route::get('/admin/{id}/editPass', 'AdminController@editPass');
-	Route::post('/admin/{id}/updatePass', 'AdminController@updatePass');
+	Route::get('/admin/{id}/edit', 'AdminController@edit');
+	Route::post('/admin/{id}/update', 'AdminController@update');
 
 	// Petugas
 	Route::get('/petugas', 'PetugasController@index');
 	Route::post('/petugas/create', 'PetugasController@create');
 	Route::get('/petugas/{id}/delete','PetugasController@delete');
-	Route::get('/petugas/{id}/editProfile', 'PetugasController@editProfile');
-	Route::post('/petugas/{id}/updateProfile', 'PetugasController@updateProfile');
-	Route::get('/petugas/{id}/editPass', 'PetugasController@editPass');
-	Route::post('/petugas/{id}/updatePass', 'PetugasController@updatePass');
+	Route::get('/petugas/{id}/edit', 'PetugasController@edit');
+	Route::post('/petugas/{id}/update', 'PetugasController@update');
 
 	// Mahasiswa
 	Route::get('/mahasiswa', 'MahasiswaController@index');
 	Route::post('/mahasiswa/create', 'MahasiswaController@create');
 	Route::get('/mahasiswa/{id}/delete','MahasiswaController@delete');
-	Route::get('/mahasiswa/{id}/editProfile', 'MahasiswaController@editProfile');
-	Route::post('/mahasiswa/{id}/updateProfile', 'MahasiswaController@updateProfile');
-	Route::get('/mahasiswa/{id}/editPass', 'MahasiswaController@editPass');
-    Route::post('/mahasiswa/{id}/updatePass', 'MahasiswaController@updatePass');
+	Route::get('/mahasiswa/{id}/edit', 'MahasiswaController@edit');
+	Route::post('/mahasiswa/{id}/update', 'MahasiswaController@update');
 
     // Laporan
     Route::get('/laporan', 'LaporanController@index');
