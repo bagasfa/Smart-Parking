@@ -34,7 +34,7 @@
       <h1>&nbsp;</h1>
 
       <form method="POST" action="{{ url('/postLogin') }}" autocomplete="off">
-        {{ csrf_field() }}
+        @csrf
         <marquee direction="up" behavior="slide" scrollamount="7">
         <div class="form-label-group">
           <input type="email" id="inputEmail" class="form-control" name="email" placeholder="Email" required autofocus>
