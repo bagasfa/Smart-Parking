@@ -70,6 +70,10 @@ class MahasiswaController extends Controller
     }
 
     public function createAPI(Request $request){
+        $validateData = $request->validate([
+            'email' => 'required|unique:user,email',
+            'nim' => 'required|unique:user,nim'
+        ]);
         $user = new User;
         $user->nama_user = $request->nama_user;
         $user->email = $request->email;
