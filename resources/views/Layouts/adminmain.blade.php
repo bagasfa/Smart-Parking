@@ -16,9 +16,9 @@
   <!-- Offline CSS -->
   <link rel="stylesheet" href="{{asset('css/bootstrap.css')}}">
   <link rel="stylesheet" href="{{asset('css/toastr.css')}}">
-  <link rel="stylesheet" href="{{ asset('css/style.css') }}">
-  <link rel="stylesheet" href="{{ asset('assets/css/style.css') }}">
-  <link rel="stylesheet" href="{{ asset('assets/css/components.css') }}">
+  <link rel="stylesheet" href="{{asset('css/style.css')}}">
+  <link rel="stylesheet" href="{{asset('assets/css/style.css')}}">
+  <link rel="stylesheet" href="{{asset('assets/css/components.css')}}">
 </head>
 
 <body>
@@ -111,9 +111,9 @@
   <script type="text/javascript" src="{{asset('assets/js/bootstrap-show-password.js')}}"></script>
   <script src="{{asset('js/toastr.min.js')}}"></script>
   <script src="{{asset('js/bootstrap.js')}}"></script>
-  <script src="{{ asset('assets/js/stisla.js') }}"></script>
-  <script src="{{ asset('assets/js/scripts.js') }}"></script>
-  <script src="{{ asset('assets/js/custom.js') }}"></script>
+  <script src="{{asset('assets/js/stisla.js')}}"></script>
+  <script src="{{asset('assets/js/scripts.js')}}"></script>
+  <script src="{{asset('assets/js/custom.js')}}"></script>
 
   <!-- Jam -->
   <script type="text/javascript">
