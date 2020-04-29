@@ -24,7 +24,7 @@
           </a>
           </div>
           <div class="card-body">
-            <form action="{{ url('/mahasiswa/'.$user->id.'/updateProfile') }}" method="POST">
+            <form action="{{ url('/mahasiswa/'.$user->id.'/update') }}" method="POST">
               @csrf
               <div class="form-group">
                   <label for="inputNIK">NIM</label>
